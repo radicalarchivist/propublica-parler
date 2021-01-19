@@ -1,6 +1,6 @@
 # propublica-parler
 
-Script to download [Parler videos released by ProPublica](https://projects.propublica.org/parler-capitol-videos/)
+Script to download [Parler videos released by ProPublica](https://projects.propublica.org/parler-capitol-videos/) retaining time and location information. 
 
 ## Setup
 
