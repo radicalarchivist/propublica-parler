@@ -4,7 +4,7 @@ Script to download [Parler videos released by ProPublica](https://projects.propu
 
 ## Setup
 
-You must have python and the youtube-dl library installed.
+You must have python and the youtube-dl,requests, and BeautifulSoup4 libraries installed.
 
 ### Install Python
 
