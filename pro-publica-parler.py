@@ -11,7 +11,7 @@ def video_list(addr):
     download_list = {}
     for video in videos:
         video_addr = video.videoz['data-src']
-        video_filename = video.videoz['data-src'].split('/')[-1]
+        video_filename = video.videoz['data-src'].split('/')[-1].split('.')[0]
         video_time = video.div.div.text.split("â\x80¢")[0].strip()
         video_location = video.div.div.text.split("â\x80¢")[1].strip()
 
