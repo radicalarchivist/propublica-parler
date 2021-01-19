@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os
+import os, sys
 import youtube_dl
 
 def video_list(addr):
@@ -15,7 +15,7 @@ def video_list(addr):
         video_time = video.div.div.text.split("â\x80¢")[0].strip()
         video_location = video.div.div.text.split("â\x80¢")[1].strip()
 
-        download_list[video_filename] = {'href':video_addr,'time':video_time,'location':video_location,'filename':video_filename}
+        download_list[video_filename] = {'href':video_addr,'time':video_time,'location':video_location}
     return download_list
 
 def ydl_opts(title,time,location):
@@ -32,6 +32,10 @@ def ydl_opts(title,time,location):
     return ydlopts
 
 if __name__ == "__main__":
-    for name,video in video_list("https://projects.propublica.org/parler-capitol-videos/").items():
-        with youtube_dl.YoutubeDL(ydl_opts(video['filename'],video['time'],video['location'])) as ydl:
-            ydl.download([video['href']])
+    try:
+        for name,video in video_list("https://projects.propublica.org/parler-capitol-videos/").items():
+            with youtube_dl.YoutubeDL(ydl_opts(name,video['time'],video['location'])) as ydl:
+                ydl.download([video['href']])
+    except KeyboardInterrupt:
+        sys.stdout.write("\nYou stopped the script prematurely.\n")
+        exit(1)
