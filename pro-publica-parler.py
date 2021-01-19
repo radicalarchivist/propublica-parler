@@ -3,10 +3,6 @@ import os
 import youtube_dl
 
 def video_list(addr):
-    '''
-    Returns RSS address for a given channel.
-    *Specifically for youtube channels. 
-    '''
     from bs4 import BeautifulSoup
     import requests 
     reqs = requests.get(addr)
@@ -23,9 +19,6 @@ def video_list(addr):
     return download_list
 
 def ydl_opts(title,time,location):
-    '''
-    Returns ytdl options depending on if the script is trying to download music
-    '''
     path = os.path.join(location,f"{time} - {title}")
     outtmpl = f"{path}.%(ext)s"
     ydlopts = {
