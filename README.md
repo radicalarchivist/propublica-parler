@@ -8,7 +8,7 @@ You must have python and the youtube-dl,requests, and BeautifulSoup4 libraries i
 
 ### Install Python
 
-Go to the [Python website]() and follow the instructions for your OS
+Go to the [Python website](https://www.python.org/downloads/) and follow the instructions for your OS
 
 ### Install Requirements
 
