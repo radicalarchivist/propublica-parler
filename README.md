@@ -17,3 +17,6 @@ Go to the [Python website](https://www.python.org/downloads/) and follow the ins
 ## Running the script
 
     $ python3 pro-publica-parler.py
+
+## Support RadicalArchivist
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N53F7TD)
